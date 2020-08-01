@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: platform-netflix-eureka-naming-server
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false # потому что самому серверу имен не надо регистрироватьс€
+    fetch-registry: false # ”казывает, должен ли этот клиент получать эврика информацию реестра из эврика сервера.
+
+logging:
+  file:
+    name: "log"
+  config: "classpath:logback-spring.xml"
